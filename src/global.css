@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    /* o apply vai aplicar em todo body, bg-"[a gente pode escolher a cor]", e deixamos todos os textos com a cor padrão zinc-100 (cinza bem clarinho) */
+    @apply bg-[#09090A] text-zinc-100
+}

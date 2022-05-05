@@ -3,6 +3,7 @@ import { ChatTeardropDots } from 'phosphor-react'
 import { useState } from 'react'
 //imporante o PopOver do headlessui para servir como assessibbildiade 
 import { Popover } from '@headlessui/react'
+import { WidgetForm } from './WidgetForm'
 
 export function Widget(){
 
@@ -10,9 +11,12 @@ export function Widget(){
 
     return (
         //Absolute para colocar position absolute, bottom e right 5 para distanciar 20px das bordas (5*4 = 20)
-        <Popover className="absolute bottom-5 right-5">
+        //o flex, flex-col e items-end foram incluidos para os itens sempre ficar alinhado ao final para a direita
+        <Popover className="absolute bottom-4 right-4 md:bottom-8 md:right-8 flex flex-col items-end">
 
-        <Popover.Panel>Hello World!</Popover.Panel>
+        <Popover.Panel>
+            <WidgetForm />
+        </Popover.Panel>
         
 
         {/* classNamee para o botão ficar com um background, rounded-full para deixar as bordas arredondadas, px-3 é o padding lateral (eixo x), h-12 é a altura,
