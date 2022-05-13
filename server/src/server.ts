@@ -18,7 +18,7 @@ app.use(routes);
 
 
 //3333 é a porta e o arrow function é a função que diz para avisar qnd estiver rodando
-app.listen(3333, () => {
+app.listen(process.env.PORT || 3333, () => {
     console.log('HTTP server running!');
 });
 
